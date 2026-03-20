@@ -37,3 +37,7 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
+      - name: Debug env variables
+        run: |
+         echo "BASE_URL=$BASE_URL"
+         echo "ADMIN_EMAIL=$ADMIN_EMAIL"        
