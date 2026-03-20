@@ -8,7 +8,7 @@ export default defineConfig({
   ],
 
   use: {
-    headless: false,
+    headless: true,
     baseURL: 'https://selenium-prd.firebaseapp.com',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure'
