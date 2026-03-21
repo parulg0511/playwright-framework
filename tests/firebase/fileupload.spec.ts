@@ -9,6 +9,6 @@ await page.goto('https://selenium-prd.firebaseapp.com/home.html', {
 
   await fileUploadPage.openFileUploadPage();
 
-  await fileUploadPage.uploadFile('C:/Users/durgesh singh/Desktop/imp.txt');
+  await fileUploadPage.uploadFile();
 
 });
