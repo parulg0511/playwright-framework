@@ -40,4 +40,8 @@ jobs:
       - name: Debug env variables
         run: |
          echo "BASE_URL=$BASE_URL"
-         echo "ADMIN_EMAIL=$ADMIN_EMAIL"        
+         echo "ADMIN_EMAIL=$ADMIN_EMAIL"       
+         - uses: actions/cache@v3
+         with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}-v2 

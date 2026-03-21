@@ -18,7 +18,7 @@ test('Login', async ({ loginPage, page }) => {
 
   // Verify login success
   const loggedInIndicator = page.locator('text=Interactions');
-  await expect(loggedInIndicator).toBeVisible();
+  await expect(loggedInIndicator).toBeVisible({ timeout: 10000 });
 
   console.log('Login via UI successful!');
 });

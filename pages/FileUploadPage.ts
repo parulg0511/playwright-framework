@@ -1,5 +1,6 @@
 import { BasePage } from '../pages/BasePage';
 import { Page, Locator } from '@playwright/test';
+import path from 'path';
 
 export class FileUploadPage extends BasePage {
 
@@ -24,6 +25,7 @@ export class FileUploadPage extends BasePage {
     await this.fileInput.waitFor({ state: 'visible' });
 
     // set file
+    const filePath1 = path.join(__dirname, '../files/imp.txt');
     await this.fileInput.setInputFiles(filePath);
 
     // screenshot after selecting file
